@@ -22,6 +22,13 @@ def select_model(args, device):
         model_path = os.path.join('model_zoo', 'team00_rfdn.pth')
         model = RFDN()
         model.load_state_dict(torch.load(model_path), strict=True)
+    elif model_id == 3:
+        # Local-Global Term Transformer
+        from models.team03_LGTT import LGTT
+        name, data_range = f"{model_id:03}_LGTT", 255.0
+        model_path = os.path.join('model_zoo', 'team03_LGTT.pth')
+        model = LGTT()
+        model.load_state_dict(torch.load(model_path)['params'], strict=True)
     else:
         raise NotImplementedError(f"Model {model_id} is not implemented.")
 
