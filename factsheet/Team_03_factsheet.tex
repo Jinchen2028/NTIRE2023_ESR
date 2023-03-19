@@ -47,30 +47,15 @@
 \title{NTIRE 2023 Efficient SR Challenge Factsheet \\
 	LGTT: Local-Global Term Transformer for SR}
 
-\author{Jinchen Zhu\\
+\author{Jinchen Zhu, Jinpeng Shi, Hui Li, Shizhuang Weng\\
 Anhui university\\
-Fried Rice Lab\\
-{\tt\small jinchen.Z@outlook.com}
+Anhui,China\\
+{\tt\small jinchen.Z@outlook.com,jinpeeeng.s@gmail.com}
 % For a paper whose authors are all at the same institution,
 % omit the following lines up until the closing ``}''.
 % Additional authors and addresses can be added with ``\and'',
 % just like the second author.
 % To save space, use either the email address or home page, not both
-\and
-Jinpeng Shi\\
-Anhui university\\
-Fried Rice Lab\\
-{\tt\small jinpeeeng.s@gmail.com, weng 1989@126.com }
-\and 
-Hui Li\\
-Anhui university\\
-Fried Rice Lab\\
-{\tt\small lihui.1221@outlook.com }
-\and
-Shizhuang Weng\\
-Anhui university\\
-Fried Rice Lab\\
-{\tt\small weng 1989@126.com }
 }
 \maketitle
 
@@ -88,7 +73,7 @@ Fried Rice Lab\\
 	\centering
 	\includegraphics[width=1\linewidth]{Image/multi_sa}
 	\label{trans_sparse}%文中引用该图片代号
-	\caption {Illustration of our multi-groups multi-heads SA mechanism, updated on the basis of \ref{GMSA}. The left figure shows
+	\caption {Illustration of our multi-groups multi-heads SA mechanism, updated on the basis of \cite{ESWT}. The left figure shows
 	the multi-groups mechanism, which divides the groups according to the number of different windows of the input, as a way
 	to increase the speed. The middle figure shows the multi-heads mechanism, where each group can have n heads in it, while
 	computing self-attention. The right figure shows the calculation of SA on a head.
@@ -125,9 +110,9 @@ Fried Rice Lab\\
 		\resizebox{\linewidth}{!}{
 			\begin{tabular}{|c|c|c|c|c|c|}
 				\hline
-				PSNR&SSIM&Runtime&Params&FLOPs&Extra Data\\
+				PSNR&SSIM&Runtime&Params&Extra Data\\
 				29.00 (21) 
-				&0.83 (20)& 0.07 (20)& 118243.00 (5)&7.38 &1.00 (1)\\
+				&0.83 (20)& 0.07 (20)& 118243.00 (5) &1.00 (1)\\
 				\hline
 			\end{tabular}
 		}
@@ -139,7 +124,7 @@ Fried Rice Lab\\
 
 \section{Method details}
 \noindent{\bf General method description}
-There is already a lot of work trying to reduce the complexity of SA, including \cite{performer,sparsetrans,reformer}. Our goal is to reduce the complexity of transformer for SR and maintain its performance,so we propose Local-Global Term Transformer (LGTT) for SR , not every group needs self attention. The overall architecture is shown in the Figure \ref{arch}. In order to establish long-term dependencies efficiently, a pair of SAs is reserved in each group as a Global-term Modeler and using the striped window mechanism\cite{ESWT}, avoiding redundant operations. we improve BWSA by adding multi-groups and multi-heads mechanisms to improve computational efficiency,i.e., multi-head group WSA (GMSA), as shown in the Figure \ref{GMSA}. In the rest of the blocks we choose efficient pixel mixer (PM) modules to without computational cost and can efficiently model short distance dependencies as a Local-term modeler. which will be mentioned later about the PM module.
+There is already a lot of work trying to reduce the complexity of SA, including \cite{performer,sparsetrans,reformer}. Our goal is to reduce the complexity of transformer for SR and maintain its performance,so we propose Local-Global Term Transformer (LGTT) for SR , not every group needs self attention. The overall architecture is shown in the Figure \ref{arch}. In order to establish long-term dependencies efficiently, a pair of SAs is reserved in each group as a Global-term Modeler and using the striped window mechanism\cite{ESWT}, avoiding redundant operations. we improve BWSA by adding multi-groups and multi-heads mechanisms to improve computational efficiency,i.e., multi-head group WSA (GMSA), as shown in the Figure \ref{GMSA}. In the rest of the blocks we propose efficient pixel mixer (PM) modules to without computational cost and can efficiently model short distance dependencies as a Local-term modeler. which will be mentioned later about the PM module.
 \\ \hspace*{\fill} \\
 \noindent{\bf Pixel Mixer}
 \label{PM}
@@ -147,6 +132,25 @@ We propose the pixel mixer module without parameters and computational complexit
 
 \section{Training strategy}
 We use DF2K (DIV2K\cite{DIV2K}, Flickr2K\cite{EDSR})and LSDIR for datasets. and propose that the channel input is set to 30, the data augmentation method with $90^\circ$, $180^\circ$, $270^\circ$ random rotation and horizontal flip is used for training, the batchsize is set to 128, and the input patch size of LR is $64\times64$.Trained using Adam optimizer\cite{Adam} with $\beta_1$ = 0.9, $\beta_2$ = 0.999. The initialized learning rate is $5\times10^{-4}$ and decays to $1\times10^{-6}$ with the cosine learning rate. The model is optimized using the loss function of $L_1$ for a total of $1\times10^6$ iterations. Model training was performed using Pytorch\cite{pytorch} on two NVIDIA V100 32G GPUs.
+
+\section{Experimental results}
+We test our model on the DIV2K and LSDIR test sets, and the experiments are performed on a V100, using the official code. The results is shown in Table \ref{test}.
+\begin{table}[h]
+	\centering
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{|c|c|c|c|c|c|}
+			\specialrule{0em}{1pt}{0pt}
+			\hline
+			PSNR&SSIM&Params[K]&FLOPs[G]&Conv&Average Runtime[ms]\\
+			\hline
+			27.02 (21)&0.81 (17)&115 (3)&7.38&58&0.08 (18)\\
+			\hline
+		\end{tabular}}
+	\caption{ Result of DIV2K and LSDIR test sets}
+	\label{test}
+	
+\end{table}
+
 
 %%%%%%%%% REFERENCES
 {\small

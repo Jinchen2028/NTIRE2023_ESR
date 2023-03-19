@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.30)  19 MAR 2023 22:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.30)  19 MAR 2023 23:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -483,44 +483,40 @@ LaTeX Info: Redefining \nameref on input line 44.
 \@outlinefile=\write3
 \openout3 = `Team_03_factsheet.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 61.
 
 
 (d:/Paper Work/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 61.
 
 
 (d:/Paper Work/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 7
-6.
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 6
+1.
 
 (d:/Paper Work/texlive/2022/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-<Image/Arch.png, id=16, 1808.7575pt x 565.11125pt>
+<Image/Arch.png, id=20, 1808.7575pt x 565.11125pt>
 File: Image/Arch.png Graphic file (type png)
 <use Image/Arch.png>
-Package pdftex.def Info: Image/Arch.png  used on input line 80.
+Package pdftex.def Info: Image/Arch.png  used on input line 65.
 (pdftex.def)             Requested size: 496.85625pt x 155.2293pt.
-<Image/multi_sa.png, id=17, 1214.5375pt x 294.09875pt>
+<Image/multi_sa.png, id=21, 1214.5375pt x 294.09875pt>
 File: Image/multi_sa.png Graphic file (type png)
 <use Image/multi_sa.png>
-Package pdftex.def Info: Image/multi_sa.png  used on input line 89.
+Package pdftex.def Info: Image/multi_sa.png  used on input line 74.
 (pdftex.def)             Requested size: 496.85625pt x 120.312pt.
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-04.
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 8
+9.
 
 (d:/Paper Work/texlive/2022/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[1{d:/Paper Work/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+) [1{d:/Paper Work/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
@@ -535,18 +531,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `Team_03_factsheet.out' has not changed.
-(rerunfilecheck)             Checksum: D2883A688121AA2571A6C14B7090320A;392.
+(rerunfilecheck)             Checksum: 9046230CB5C0E4AE2D623AE488483414;551.
 Package rerunfilecheck Info: File `Team_03_factsheet.brf' has not changed.
-(rerunfilecheck)             Checksum: BAF064AB35AF8E3D99557F0CC0CE73EE;246.
+(rerunfilecheck)             Checksum: 8B60D7E1A4A9FE14E23BD105162C8899;289.
  ) 
 Here is how much of TeX's memory you used:
- 14046 strings out of 478268
- 236770 string characters out of 5844821
- 559764 words of memory out of 5000000
- 32047 multiletter control sequences out of 15000+600000
+ 14052 strings out of 478268
+ 236840 string characters out of 5844821
+ 557764 words of memory out of 5000000
+ 32051 multiletter control sequences out of 15000+600000
  491354 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,10n,91p,1015b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,10n,91p,1016b,507s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {d:/Paper Work/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<d:/Paper 
 Work/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Pape
 r Work/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Pap
@@ -557,10 +553,10 @@ Paper Work/texlive/2022/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><d:/Paper
  Work/texlive/2022/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><d:/Paper Work/t
 exlive/2022/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><d:/Paper Work/texlive/
 2022/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Team_03_factsheet.pdf (3 pages, 386388 bytes).
+Output written on Team_03_factsheet.pdf (3 pages, 385579 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 19 named destinations out of 1000 (max. 500000)
- 35 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 127 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
