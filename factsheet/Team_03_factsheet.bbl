@@ -1,0 +1,50 @@
+\begin{thebibliography}{1}\itemsep=-1pt
+
+\bibitem{DIV2K}
+Eirikur Agustsson and Radu Timofte.
+\newblock Ntire 2017 challenge on single image super-resolution: Dataset and
+  study.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition workshops}, pages 126--135, 2017.
+
+\bibitem{sparsetrans}
+Rewon Child, Scott Gray, Alec Radford, and Ilya Sutskever.
+\newblock Generating long sequences with sparse transformers.
+\newblock {\em arXiv preprint arXiv:1904.10509}, 2019.
+
+\bibitem{performer}
+Krzysztof Choromanski, Valerii Likhosherstov, David Dohan, Xingyou Song,
+  Andreea Gane, Tamas Sarlos, Peter Hawkins, Jared Davis, Afroz Mohiuddin,
+  Lukasz Kaiser, et~al.
+\newblock Rethinking attention with performers.
+\newblock {\em arXiv preprint arXiv:2009.14794}, 2020.
+
+\bibitem{Adam}
+Diederik~P Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem{reformer}
+Nikita Kitaev, {\L}ukasz Kaiser, and Anselm Levskaya.
+\newblock Reformer: The efficient transformer.
+\newblock {\em arXiv preprint arXiv:2001.04451}, 2020.
+
+\bibitem{EDSR}
+Bee Lim, Sanghyun Son, Heewon Kim, Seungjun Nah, and Kyoung Mu~Lee.
+\newblock Enhanced deep residual networks for single image super-resolution.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition workshops}, pages 136--144, 2017.
+
+\bibitem{pytorch}
+Adam Paszke, Sam Gross, Francisco Massa, Adam Lerer, James Bradbury, Gregory
+  Chanan, Trevor Killeen, Zeming Lin, Natalia Gimelshein, Luca Antiga, et~al.
+\newblock Pytorch: An imperative style, high-performance deep learning library.
+\newblock {\em Advances in neural information processing systems}, 32, 2019.
+
+\bibitem{ESWT}
+Jinpeng Shi, Hui Li, Tianle Liu, Yulong Liu, Mingjian Zhang, Jinchen Zhu, Ling
+  Zheng, and Shizhuang Weng.
+\newblock Image super-resolution using efficient striped window transformer.
+\newblock {\em arXiv preprint arXiv:2301.09869}, 2023.
+
+\end{thebibliography}

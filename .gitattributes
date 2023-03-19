@@ -1,0 +1,2 @@
+003_LGTT filter=lfs diff=lfs merge=lfs -text
+003_LGTT.zip filter=lfs diff=lfs merge=lfs -text
